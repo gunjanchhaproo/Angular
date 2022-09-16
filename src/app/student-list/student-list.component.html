@@ -1,0 +1,21 @@
+
+<app-view-student *ngIf="selectedStudent" [ss]="selectedStudent"></app-view-student>
+<table>
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th></th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of studentData">
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.contact}}</td>
+            <td><button (click)="viewDetails(i)">View Details</button></td>
+        </tr>
+    </tbody>
+</table>
